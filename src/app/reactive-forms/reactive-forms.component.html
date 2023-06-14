@@ -1,0 +1,25 @@
+<div class="container mt-5 w-50 shadow p-4 ">
+<form  [formGroup]="reactiveForm" (ngSubmit)="submit()">
+    <h3 style="text-align: center;">Reactive Form With FormBUilder</h3>
+    <div class="mb-3">
+      <label for="id1" class="form-label">First Name</label>
+      <input type="email" class="form-control" id="id1" formControlName="firstName">
+    </div>
+    <div class="mb-3">
+      <label for="id2" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="id2" formControlName="lastName">
+    </div>
+    <div class="mb-3">
+        <label for="id3" class="form-label">Mobile Number</label>
+        <input type="text" class="form-control" id="id3" formControlName="mobileNo">
+      </div><div class="mb-3">
+        <label for="id4" class="form-label">Email ID</label>
+        <input type="text" class="form-control" id="id4" formControlName="emailid">
+      </div>
+      <div class="mb-3">
+        <label for="id5" class="form-label">Password</label>
+        <input type="text" class="form-control" id="id5"formControlName="password">
+      </div>
+    <button type="submit" class="btn btn-primary" [disabled]="reactiveForm.invalid">Submit</button>
+  </form>
+</div>
